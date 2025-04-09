@@ -1,10 +1,7 @@
-import InProgress from "@/components/main/InProgress";
 import TodoMain from "@/components/todo/Todo";
 import { FC } from "react";
 
-interface ToDoPageProps {}
-
-const ToDoPage: FC<ToDoPageProps> = () => {
+const ToDoPage: FC = () => {
   return (
     <>
       <div className="h-screen flex flex-col justify-center items-center">

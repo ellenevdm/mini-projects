@@ -2,10 +2,9 @@
 
 import { Quote, TAGS } from "@/types/quotes";
 import { fetchQuoteByTag } from "@/utils/quoteApiFetcher";
-import { FC, useEffect, useState } from "react";
+import { FC, useCallback, useEffect, useState } from "react";
 import TagSelector from "./TagSelector";
 import QuoteCard from "./QuoteCard";
-import { quotesAboutQuotes } from "@/data/quotes";
 
 const QuoteMain: FC = () => {
   const [quoteData, setQuoteData] = useState<Quote>({
@@ -15,16 +14,16 @@ const QuoteMain: FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [selectedTag, setSelectedTag] = useState<string>(TAGS[0]);
 
-  const getNewQuote = async () => {
+  const getNewQuote = useCallback(async () => {
     setLoading(true);
     const data = await fetchQuoteByTag(selectedTag);
     setQuoteData(data);
     setLoading(false);
-  };
+  }, [selectedTag]);
 
   useEffect(() => {
     getNewQuote();
-  }, [selectedTag]);
+  }, [selectedTag, getNewQuote]);
 
   return (
     <>

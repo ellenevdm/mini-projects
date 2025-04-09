@@ -1,12 +1,7 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import QuoteMain from "./QuoteMain";
-import {
-  mockGetNewQuote,
-  mockQuote,
-  tags,
-} from "../../../__mocks__/quoteGeneratorQuotesMock";
+import { mockQuote, tags } from "../../../__mocks__/quoteGeneratorQuotesMock";
 import { fetchQuoteByTag } from "@/utils/quoteApiFetcher";
-import { TAGS } from "@/types/quotes";
 
 jest.mock("@/utils/quoteApiFetcher", () => ({
   fetchQuoteByTag: jest.fn(),
@@ -15,9 +10,9 @@ jest.mock("@/utils/quoteApiFetcher", () => ({
 describe("Main Quote Component", () => {
   const mockTags = tags;
 
-  jest.mock("@/types/quotes", () => {
-    TAGS: mockTags;
-  });
+  jest.mock("@/types/quotes", () => ({
+    TAGS: mockTags,
+  }));
 
   beforeEach(() => {
     jest.clearAllMocks();

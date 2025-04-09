@@ -5,7 +5,6 @@ import {
   mockEmptyTodo,
   mockTodo,
 } from "../../../__mocks__/todoMock";
-import { before, mock } from "node:test";
 
 describe("Todo Item", () => {
   beforeEach(() => {

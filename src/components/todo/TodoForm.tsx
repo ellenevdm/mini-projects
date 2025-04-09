@@ -19,7 +19,10 @@ const TodoForm: FC<TodoFormProps> = ({ categories, onAddTodo }) => {
   const onSubmit: SubmitHandler<TodoInput> = (data) => {
     console.info("data", data);
     if (!data.text) return;
-
+    if (!data.category) {
+      setError(new Error("Please select a category"));
+      return;
+    }
     onAddTodo(data.text, data.category);
     reset();
   };

@@ -1,9 +1,7 @@
 import Link from "next/link";
 import { FC } from "react";
 
-interface HeaderProps {}
-
-const Header: FC<HeaderProps> = () => {
+const Header: FC = () => {
   return (
     <>
       <div className="flex gap-5">

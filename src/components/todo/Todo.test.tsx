@@ -1,12 +1,5 @@
-import {
-  act,
-  fireEvent,
-  render,
-  screen,
-  waitFor,
-} from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import TodoMain from "./Todo";
-import userEvent from "@testing-library/user-event";
 
 describe("Todo Component", () => {
   it("should render todo main component", () => {

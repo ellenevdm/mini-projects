@@ -5,7 +5,6 @@ import { categories } from "@/data/todoCategories";
 import CategoryForm from "./CategoryForm";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
-import Button from "../ui/Button";
 
 const TodoMain: FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);

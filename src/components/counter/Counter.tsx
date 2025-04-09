@@ -3,9 +3,7 @@
 import { FC, useState } from "react";
 import Button from "../ui/Button";
 
-interface CounterProps {}
-
-const Counter: FC<CounterProps> = () => {
+const Counter: FC = () => {
   const [count, setCount] = useState(0);
   function increaseCounter() {
     setCount(count + 1);

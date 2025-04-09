@@ -5,7 +5,7 @@ import {
 } from "@/data/quizQuestions";
 import { FC, useEffect, useState } from "react";
 import QuizQuestions from "./Questions";
-import { useRouter } from "next/navigation"; // Correct import for Next.js 13+
+
 import Button from "../ui/Button";
 
 export type QuestionType = {

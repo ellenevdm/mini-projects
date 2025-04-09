@@ -30,7 +30,7 @@ describe("It renders the counter component", () => {
     const increaseButton = screen.getByRole("button", {
       name: /increase/i,
     });
-    const counter = screen.getByRole("paragraph");
+
     fireEvent.click(increaseButton);
     fireEvent.click(increaseButton);
 
