@@ -9,6 +9,12 @@ export default function Home() {
           This site was created to sharpen my frontend skills and stay updated
           by building and testing small React projects.
         </p>
+        <p>
+          <em>
+            Please note that this is not yet a styled app. This is just a basic
+            app to show off my skills. The styling is still in progress
+          </em>
+        </p>
       </div>
     </>
   );
