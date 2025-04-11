@@ -27,7 +27,7 @@ const QuoteMain: FC = () => {
 
   return (
     <>
-      <div>
+      <div className="flex flex-col p-5 lg:p-20 shadow-md rounded-lg max-w-2xl m-5 lg:w-200  justidy-center gap-5">
         <TagSelector onTagChange={setSelectedTag} selectedTag={selectedTag} />
         <QuoteCard
           author={quoteData.author}

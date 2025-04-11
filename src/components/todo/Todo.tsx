@@ -30,8 +30,8 @@ const TodoMain: FC = () => {
 
   return (
     <>
-      <div className="flex gap-19">
-        <div>
+      <div className="flex flex-col lg:flex-row items-center flex-wrap justify-center m-5 lg:w-200">
+        <div className="flex flex-col lg:flex-row  justify-center gap-10 lg:w-200">
           <TodoForm onAddTodo={addTodo} categories={categoryList} />
           <CategoryForm onAddCategory={addCategory} />
         </div>

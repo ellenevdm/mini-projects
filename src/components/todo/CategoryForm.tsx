@@ -23,14 +23,17 @@ const CategoryForm: FC<CategoryFormProps> = ({ onAddCategory }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-col gap-2 p-5 shadow rounded-lg bg-gray-100 max-w-sm m-5 lg:w-200"
+      >
         <h3 className="text-xl font-bold text-center">Add Category Form</h3>
         <p className="flex gap-2 items-baseline justify-center flex-col">
           <label htmlFor="category" className="font-semibold">
             New Category:
           </label>
           <input
-            className="p-2 bg-white border"
+            className="p-2 bg-white border w-full"
             id="category"
             placeholder="New category"
             {...register("category", { required: true })}

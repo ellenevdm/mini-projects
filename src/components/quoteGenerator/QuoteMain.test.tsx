@@ -20,8 +20,7 @@ describe("Main Quote Component", () => {
 
   it("should render component successfully", () => {
     render(<QuoteMain />);
-    const headingText = screen.getByText(/Your Quote/i);
-    expect(headingText).toBeInTheDocument();
+
     const select = screen.getByRole("combobox");
     expect(select).toBeInTheDocument();
     const button = screen.getByRole("button", { name: "Get new random quote" });

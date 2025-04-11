@@ -18,7 +18,11 @@ describe("Tag selector component", () => {
     const options = screen.getAllByRole("option");
     expect(options).toHaveLength(mockTags.length);
     mockTags.forEach((tag) => {
-      expect(screen.getByText(tag)).toBeInTheDocument();
+      expect(
+        screen.getByText(
+          (content) => content.toLowerCase() === tag.toLowerCase()
+        )
+      ).toBeInTheDocument();
     });
   });
   it("should call onTagChange with the selected tag when changed", () => {

@@ -29,7 +29,10 @@ const TodoForm: FC<TodoFormProps> = ({ categories, onAddTodo }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-col gap-2 p-5 shadow rounded-lg bg-gray-100 max-w-sm m-5 lg:w-200"
+      >
         {error && <p className="text-red-500">{error.message}</p>}
         <h3 className="text-xl font-bold text-center">Add Todo Form</h3>
         <p className="flex flex-col ">

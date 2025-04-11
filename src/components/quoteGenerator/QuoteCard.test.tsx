@@ -15,8 +15,7 @@ describe("Quote Card Component", () => {
         loading={false}
       />
     );
-    const headingText = screen.getByText(/Your Quote/i);
-    expect(headingText).toBeInTheDocument();
+
     const quoteText = screen.getByText(mockQuote.quote);
     expect(quoteText).toBeInTheDocument();
     const authorText = screen.getByText(`- ${mockQuote.author}`);

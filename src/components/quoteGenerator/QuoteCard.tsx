@@ -17,17 +17,20 @@ const QuoteCard: FC<QuoteCardProps> = ({
 }) => {
   return (
     <>
-      <div>
-        <h1>Your Quote</h1>
+      <div className="flex flex-wrap flex-col">
         {loading ? (
           <p>Loading...</p>
         ) : (
-          <>
-            <p>{quote}</p>
-            <p>- {author}</p>
-          </>
+          <div className="flex ">
+            <p className="text-2xl font-semibold text-gray-900 p-5">
+              {quote} <em className="font-medium text-lg">- {author}</em>
+            </p>
+          </div>
         )}
-        <Button className="py-2 px-4 bg-gray-200 rounded" onClick={onNewQuote}>
+        <Button
+          className="py-2 px-4 bg-gray-200 rounded font-semibold"
+          onClick={onNewQuote}
+        >
           Get new random quote
         </Button>
       </div>
