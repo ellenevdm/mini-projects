@@ -2,7 +2,9 @@ import { Quote } from "@/types/quotes";
 
 export async function fetchQuoteByTag(tag: string): Promise<Quote> {
   try {
-    const resp = await fetch(`https://api.quotable.io/random?tags=${tag}`);
+    const resp = await fetch(`https://api.quotable.io/random?tags=${tag}`, {
+      method: "GET",
+    });
     if (!resp.ok) {
       throw new Error("Failed to fetch quote...");
     }

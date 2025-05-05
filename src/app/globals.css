@@ -24,3 +24,54 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@theme {
+  --color-grey-50: #f4fafb;
+  --color-grey-200: #c5e4e7;
+  --color-grey-400: #7f9c9f;
+  --color-grey-500: #5e7a7d;
+  --color-green-900: #00494d;
+  --color-green-400: #26c0ab;
+  --tracking-1: 0.05em;
+  --tracking-2: 0.1em;
+  --tracking-3: 0.15em;
+  --tracking-4: 0.2em;
+  --tracking-5: 0.25em;
+  --tracking-6: 0.3em;
+  --tracking-7: 0.35em;
+  --tracking-8: 0.4em;
+  --tracking-9: 0.45em;
+  --tracking-10: 0.5em;
+}
+/* More specific selector */
+form input[type="number"]::-webkit-outer-spin-button,
+form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+html,
+body {
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
