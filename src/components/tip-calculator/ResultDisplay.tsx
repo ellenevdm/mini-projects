@@ -1,5 +1,5 @@
 import { useTipCalculatorCtx } from "@/context/calculatorContext";
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 
 const ResultDisplay: FC = () => {
   const { tipPerPerson, totalTipAmount } = useTipCalculatorCtx();

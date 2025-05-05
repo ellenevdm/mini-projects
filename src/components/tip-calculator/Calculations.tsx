@@ -1,5 +1,5 @@
 import { useTipCalculatorCtx } from "@/context/calculatorContext";
-import { ChangeEvent, FC, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import CalculatorInput from "./Input";
 
 import {
@@ -8,7 +8,6 @@ import {
 } from "../../types/tipCalculatorSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { parse } from "path";
 
 const tipPercentOptions = [
   { value: 5, label: "5%" },
